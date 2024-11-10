@@ -1,0 +1,27 @@
+{
+  "name": "hepsiemlak",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/compiler-sfc": "^3.5.12",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^25.0.1",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
+  },
+  "dependencies": {
+    "vue": "^3.3.0"
+  }
+}

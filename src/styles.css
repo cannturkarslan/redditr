@@ -1,0 +1,65 @@
+.link-item:hover {
+    background-color: #f8f9fa;
+}
+.link-item:hover .delete-btn {
+    display: block !important;
+}
+.delete-btn {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.toast-container {
+    z-index: 1050;
+}
+.toast {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+.toast-body {
+    background-color: #8BC34A;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0;
+}
+.link-item {
+    background: white;
+    transition: background-color 0.2s;
+}
+.points-badge {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    margin-right: 15px;
+}
+.points-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+.points-text {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.upvote:hover {
+    background-color: #D93900;
+    color: white;
+}
+.downvote:hover {
+    background-color: #6A5CFF;
+    color: white;
+}
+/* Remove default Bootstrap toast styling */
+.toast:not(.showing):not(.show) {
+    opacity: 0;
+}
+.toast.show {
+    opacity: 1;
+}
