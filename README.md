@@ -4,3 +4,6 @@ Npm Version: 10.9.0
 Vue Version: 3.3.0
 Vite Version: 5.4.10
 Vitest Version: 2.1.4
+
+Vitest Unit Test command: npm test
+Server Start: npm run dev
