@@ -1,20 +1,13 @@
-import '@testing-library/jest-dom'
-import { vi } from 'vitest'
+import { createApp } from 'vue'
+import App from '../src/app.js'
+import 'bootstrap';
 
-// Mock localStorage
-const localStorageMock = {
-    getItem: vi.fn(),
-    setItem: vi.fn(),
-    clear: vi.fn()
-}
-global.localStorage = localStorageMock
+// Create a mounting point for the app
+const appContainer = document.createElement('div')
+appContainer.id = 'app'
+document.body.appendChild(appContainer)
 
-// Mock Bootstrap modal
-global.bootstrap = {
-    Modal: class {
-        constructor() {
-            this.show = vi.fn()
-            this.hide = vi.fn()
-        }
-    }
-}
+// Mount the app
+const app = createApp(App)
+app.mount('#app')
+

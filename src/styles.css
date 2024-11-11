@@ -1,35 +1,33 @@
-.link-item:hover {
-    background-color: #f8f9fa;
-}
-.link-item:hover .delete-btn {
-    display: block !important;
-}
-.delete-btn {
-    display: none;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-}
 .toast-container {
-    z-index: 1050;
+    z-index: 9999 !important;
+    pointer-events: none;
 }
+
 .toast {
-    background: none;
-    border: none;
-    box-shadow: none;
+    background-color: #198754 !important;
+    color: white !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    opacity: 1 !important;
 }
-.toast-body {
-    background-color: #8BC34A;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
-    text-align: center;
-    margin: 0;
+
+.toast.show {
+    opacity: 1;
 }
+
 .link-item {
     background: white;
     transition: background-color 0.2s;
 }
+
+.link-item:hover {
+    background-color: #f8f9fa;
+}
+
+.link-item:hover .delete-btn {
+    display: block !important;
+}
+
 .points-badge {
     width: 60px;
     height: 60px;
@@ -40,26 +38,52 @@
     background: #f8f9fa;
     margin-right: 15px;
 }
+
 .points-number {
     font-size: 24px;
     font-weight: bold;
 }
+
 .points-text {
     font-size: 12px;
     text-transform: uppercase;
 }
+
+.delete-btn {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
 .upvote:hover {
     background-color: #D93900;
     color: white;
 }
+
 .downvote:hover {
     background-color: #6A5CFF;
     color: white;
 }
-/* Remove default Bootstrap toast styling */
-.toast:not(.showing):not(.show) {
+
+.pagination-component .page-link {
+    cursor: pointer;
+}
+
+.pagination-component .page-item.disabled .page-link {
+    cursor: not-allowed;
+}
+
+.toast-component .fade-enter-active,
+.toast-component .fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.toast-component .fade-enter-from,
+.toast-component .fade-leave-to {
     opacity: 0;
 }
-.toast.show {
-    opacity: 1;
+
+.toast:not(.showing):not(.show) {
+    opacity: 0;
 }
